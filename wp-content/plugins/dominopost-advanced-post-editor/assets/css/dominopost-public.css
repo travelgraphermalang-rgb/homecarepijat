@@ -1,0 +1,745 @@
+/* DominoPost Frontend Styles */
+
+/* Copy Code Block - Light Professional Theme */
+.dominopost-copy-code-wrapper {
+    background: #fafafa;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    margin: 1.5em 0;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dominopost-copy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f8fa;
+    padding: 8px 16px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.dominopost-code-title {
+    color: #0366d6;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+.dominopost-copy-code-wrapper pre {
+    padding: 20px;
+    margin: 0;
+    background-color: #fafafa;
+    color: #24292e;
+    border: none;
+    border-radius: 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+.dominopost-copy-code-wrapper pre code {
+    background-color: transparent;
+    font-family: inherit;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-size: inherit !important;
+}
+
+.dominopost-copy-code-wrapper .copy-button {
+    background: #ffffff;
+    color: #24292e;
+    border: 1px solid #d1d5da;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dominopost-copy-code-wrapper .copy-button::before {
+    content: "📋";
+    font-size: 14px;
+}
+
+.dominopost-copy-code-wrapper .copy-button:hover {
+    background: #f3f4f6;
+    border-color: #0366d6;
+    color: #0366d6;
+}
+
+.dominopost-copy-code-wrapper .copy-button.copied {
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.dominopost-copy-code-wrapper .copy-button.copied::before {
+    content: "✓";
+}
+
+/* ========================================
+   TABLE OF CONTENTS - MODERN STYLES
+   ======================================== */
+
+/* Base TOC Container - Modern Card Style */
+.dominopost-toc {
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 30px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 115, 170, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle accent line */
+.dominopost-toc::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #0073aa 0%, #005177 100%);
+    border-radius: 12px 0 0 12px;
+}
+
+.dominopost-toc:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* TOC Header with Toggle */
+.dominopost-toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.dominopost-toc h3 {
+    margin: 0;
+    font-size: 1.35em;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.02em;
+}
+
+/* Icon using SVG background instead of emoji */
+.dominopost-toc h3::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230073aa'%3E%3Cpath d='M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+}
+
+/* Toggle Button - Modern Style */
+.dominopost-toc-toggle {
+    background: rgba(0, 115, 170, 0.08);
+    border: none;
+    color: #0073aa;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dominopost-toc-toggle:hover {
+    background: rgba(0, 115, 170, 0.15);
+    color: #005177;
+}
+
+.dominopost-toc-toggle::before {
+    content: "?";
+    font-size: 10px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.dominopost-toc.toc-collapsed .dominopost-toc-toggle::before {
+    transform: rotate(-90deg);
+}
+
+/* TOC Content - Collapsible */
+.dominopost-toc-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.dominopost-toc.toc-collapsed .dominopost-toc-content {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Base List Styling */
+.dominopost-toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dominopost-toc li {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+.dominopost-toc li:last-child {
+    border-bottom: none;
+}
+
+.dominopost-toc li:hover {
+    padding-left: 8px;
+    background: rgba(0, 115, 170, 0.03);
+    border-radius: 6px;
+}
+
+.dominopost-toc a {
+    color: #2c3338;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.dominopost-toc a:hover {
+    color: #0073aa;
+    padding-left: 4px;
+}
+
+/* ========================================
+   STYLE VARIATIONS
+   ======================================== */
+
+/* BULLETS Style - Modern Icons */
+.dominopost-toc.toc-style-bullets li {
+    padding-left: 24px;
+    position: relative;
+}
+
+.dominopost-toc.toc-style-bullets li::before {
+    content: "\25B8";
+    position: absolute;
+    left: 0;
+    color: #0073aa;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+.dominopost-toc.toc-style-bullets li:hover::before {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
+
+/* NUMBERS Style - Modern Counters */
+.dominopost-toc.toc-style-numbers {
+    counter-reset: toc-counter;
+}
+
+.dominopost-toc.toc-style-numbers li {
+    padding-left: 40px;
+    position: relative;
+    counter-increment: toc-counter;
+}
+
+.dominopost-toc.toc-style-numbers li::before {
+    content: counter(toc-counter);
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background: linear-gradient(135deg, #0073aa 0%, #005177 100%);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0, 115, 170, 0.3);
+}
+
+.dominopost-toc.toc-style-numbers li:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 115, 170, 0.4);
+    transition: all 0.2s ease;
+}
+
+/* MINIMAL Style - Ultra Clean */
+.dominopost-toc.toc-style-minimal {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 20px 24px;
+}
+
+.dominopost-toc.toc-style-minimal::before {
+    display: none;
+}
+
+.dominopost-toc.toc-style-minimal h3::before {
+    display: none;
+}
+
+.dominopost-toc.toc-style-minimal li {
+    border-bottom: none;
+    padding: 8px 0;
+}
+
+.dominopost-toc.toc-style-minimal a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.dominopost-toc.toc-style-minimal a:hover {
+    color: #0073aa;
+}
+
+/* BOXED Style - Bold & Structured */
+.dominopost-toc.toc-style-boxed {
+    background: #ffffff;
+    border: 2px solid #0073aa;
+    box-shadow: 0 8px 24px rgba(0, 115, 170, 0.15);
+}
+
+.dominopost-toc.toc-style-boxed::before {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0073aa 0%, #005177 100%);
+    border-radius: 0;
+}
+
+.dominopost-toc.toc-style-boxed .dominopost-toc-header {
+    background: linear-gradient(135deg, #0073aa 0%, #005177 100%);
+    margin: -24px -28px 20px;
+    padding: 16px 28px;
+    border-radius: 10px 10px 0 0;
+}
+
+.dominopost-toc.toc-style-boxed h3 {
+    color: white;
+}
+
+.dominopost-toc.toc-style-boxed h3::before {
+    filter: brightness(0) invert(1);
+}
+
+.dominopost-toc.toc-style-boxed .dominopost-toc-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.dominopost-toc.toc-style-boxed .dominopost-toc-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.dominopost-toc.toc-style-boxed li {
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: #f9fafb;
+}
+
+.dominopost-toc.toc-style-boxed li:hover {
+    background: #f0f9ff;
+    border-color: #0073aa;
+    box-shadow: 0 2px 8px rgba(0, 115, 170, 0.1);
+}
+
+/* Nested Lists Support */
+.dominopost-toc ul ul {
+    margin-top: 8px;
+    padding-left: 24px;
+}
+
+.dominopost-toc ul ul li {
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .dominopost-toc {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .dominopost-toc h3 {
+        font-size: 1.2em;
+    }
+
+    .dominopost-toc a {
+        font-size: 14px;
+    }
+}
+
+.dominopost-toc h3 {
+    font-size: 1.2em;
+}
+
+.dominopost-toc a {
+    font-size: 14px;
+}
+
+/* Download Button Wrapper */
+.dominopost-download-wrapper {
+    margin: 15px 0;
+    clear: both;
+}
+
+.dominopost-download-wrapper.dominopost-align-left {
+    text-align: left;
+}
+
+.dominopost-download-wrapper.dominopost-align-center {
+    text-align: center;
+}
+
+.dominopost-download-wrapper.dominopost-align-right {
+    text-align: right;
+}
+
+/* Download Button */
+.dominopost-download-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.dominopost-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Pulse Animation */
+.dominopost-download-pulse {
+    animation: dominopost-pulse 2s infinite;
+}
+
+@keyframes dominopost-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Bounce Animation */
+.dominopost-download-bounce {
+    animation: dominopost-bounce 1s infinite;
+}
+
+@keyframes dominopost-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Glow Animation */
+.dominopost-download-glow {
+    animation: dominopost-glow 1.5s infinite alternate;
+}
+
+@keyframes dominopost-glow {
+    from {
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    to {
+        box-shadow: 0 4px 25px rgba(102, 126, 234, 0.8), 0 0 30px rgba(102, 126, 234, 0.6);
+    }
+}
+
+/* Table Styles */
+.dominopost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.dominopost-table th,
+.dominopost-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.dominopost-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #23282d;
+}
+
+.dominopost-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dominopost-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* AI FAQ Styles - Premium Modern Accordion */
+.dp-faq-block {
+    margin: 40px 0;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dp-faq-item {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dp-faq-item:last-child {
+    border-bottom: none;
+}
+
+.dp-faq-question {
+    padding: 20px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    background: linear-gradient(to right, #f8fafc, #ffffff);
+    color: #1a202c;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.dp-faq-question:hover {
+    background: #f1f5f9;
+    color: #2271b1;
+}
+
+.dp-faq-question .dashicons {
+    color: #64748b;
+    transition: transform 0.3s ease;
+}
+
+.dp-faq-question:hover .dashicons {
+    color: #2271b1;
+}
+
+/* AI FAQ Styles - Modern Indigo (Default) */
+.dp-faq-block.dp-faq-style-modern {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+}
+.dp-faq-block.dp-faq-style-modern .dp-faq-question {
+    background: linear-gradient(to right, #f8fafc, #ffffff);
+}
+
+/* AI FAQ Styles - Minimal Clean */
+.dp-faq-block.dp-faq-style-minimal {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: none;
+}
+.dp-faq-block.dp-faq-style-minimal .dp-faq-question {
+    background: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+.dp-faq-block.dp-faq-style-minimal .dp-faq-item:last-child .dp-faq-question {
+    border-bottom: none;
+}
+
+/* AI FAQ Styles - Elevation Shadow */
+.dp-faq-block.dp-faq-style-shadow {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+.dp-faq-block.dp-faq-style-shadow .dp-faq-item {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: none;
+}
+.dp-faq-block.dp-faq-style-shadow .dp-faq-question {
+    border-radius: 12px 12px 0 0;
+}
+
+/* AI FAQ Styles - Compact Tight */
+.dp-faq-block.dp-faq-style-compact {
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+.dp-faq-block.dp-faq-style-compact .dp-faq-question {
+    padding: 10px 15px;
+    font-size: 15px;
+    background: #fafafa;
+}
+.dp-faq-block.dp-faq-style-compact .dp-faq-answer {
+    padding: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .dominopost-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+
+
+
+
+/* ========================================
+   PHASE 4: RELATED POSTS - SIMPLE LIST
+   ======================================== */
+
+.dominopost-related-posts {
+    margin: 40px 0;
+    padding: 25px 30px;
+    background: #f8f9fa;
+    border-left: 4px solid #4285f4;
+    border-radius: 8px;
+}
+
+.dominopost-related-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.dominopost-related-list {
+    margin: 0;
+    padding-left: 25px;
+    list-style-position: outside;
+}
+
+.dominopost-related-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.dominopost-related-list li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.dominopost-related-list li a:hover {
+    color: #4285f4;
+    text-decoration: underline;
+}
+
+/* ========================================
+   PHASE 4: LAST UPDATED NOTICE
+   ======================================== */
+
+.dominopost-last-updated {
+    background: #e7f5ff;
+    border-left: 4px solid #0073aa;
+    padding: 12px 16px;
+    margin: 0 0 24px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dominopost-updated-icon {
+    font-size: 18px;
+}
+
+/* TOC Show More Button */
+.dominopost-toc-show-more-container {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #e1e4e8;
+}
+
+.dominopost-toc-show-more {
+    background: none;
+    border: none;
+    color: #2271b1;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.dominopost-toc-show-more:hover {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+.dominopost-toc-show-more:focus {
+    outline: 2px solid #2271b1;
+    border-radius: 4px;
+}
+
+/* Hidden items class */
+.dominopost-toc-hidden-item {
+    display: none;
+}
